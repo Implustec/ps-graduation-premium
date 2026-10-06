@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduación 6° Grado - Primaria José María Pino Suárez</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- NOTIFICACIÓN TOAST -->
+    <div id="toast"><i class="fa-solid fa-circle-check" id="toastIcon"></i><span id="toastText">Mensaje</span></div>
+
+    <!-- BOTÓN MÚSICA AMBIENTAL -->
+    <button class="music-btn" onclick="toggleMusic()" title="Reproducir música ambiental">
+        <i class="fa-solid fa-music" id="musicIcon"></i>
+    </button>
+
+    <div class="mobile-wrapper">
+        
+        <!-- HERO / PORTADA -->
+        <header class="hero">
+            <div class="badge-school">Generación 2021 - 2027</div>
+            <h1>Primaria José María Pino Suárez</h1>
+            <p class="subtitle">¡Lo logramos! Nos graduamos de sexto grado.</p>
+            
+            <!-- Cuenta Regresiva -->
+            <div class="countdown-box">
+                <div class="time-unit">
+                    <span id="days">00</span>
+                    <small>Días</small>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <small>Hrs</small>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <small>Min</small>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <small>Seg</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- PASE VIP DIGITAL -->
+        <section>
+            <div class="vip-pass">
+                <h3><i class="fa-solid fa-id-badge"></i> Pase de Invitado VIP</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Presenta este código en la entrada del salón</p>
+                <div class="vip-code">JMS-2027-VIP</div>
+                <p style="font-size: 0.75rem; color: var(--accent);">Válido hasta para 2 personas</p>
+            </div>
+        </section>
+
+        <!-- UBICACIÓN Y FECHA -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-location-dot"></i> Gran Celebración</h2>
+            <div class="info-card">
+                <div class="info-item">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <h3>Fecha</h3>
+                    <p>Viernes 10 de Julio, 2027</p>
+                </div>
+                <div class="info-item" style="margin-top: 15px;">
+                    <i class="fa-regular fa-clock"></i>
+                    <h3>Horario</h3>
+                    <p>10:00 AM - Entrega de Diplomas y Ceremonia</p>
+                </div>
+                <div class="info-item" style="margin-top: 15px;">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                    <h3>Lugar</h3>
+                    <p>Salón Los Loros<br><span style="font-size: 0.9rem; color: var(--text-muted);">Av. de las Torres, Chimalhuacán, Estado de México</span></p>
+                </div>
+                <a href="https://maps.google.com/?q=Salón+Los+Loros+Av+de+las+Torres+Chimalhuacan" target="_blank" class="btn-map">
+                    <i class="fa-solid fa-map-location-dot"></i> Ver Ubicación en Maps
+                </a>
+            </div>
+        </section>
+
+        <!-- ITINERARIO -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-list-check"></i> Itinerario del Día</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">10:00 AM</div>
+                    <div class="timeline-title">Recepción de invitados y alumnos</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">10:45 AM</div>
+                    <div class="timeline-title">Ceremonia de Entrega de Diplomas</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">12:30 PM</div>
+                    <div class="timeline-title">Brindis y palabras de agradecimiento</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">01:15 PM</div>
+                    <div class="timeline-title">Comida y convivencia de generación</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERÍA DE RECUERDOS (MEJORADA SIN NECESIDAD DE FOTOS OBLIGATORIAS) -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-images"></i> Momentos Inolvidables</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-img-placeholder">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <span>Foto #1</span>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img-placeholder">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+                    <span>Foto #2</span>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img-placeholder">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <span>Foto #3</span>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img-placeholder">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span>Foto #4</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MURO DE MENSAJES -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-comment-dots"></i> Palabras de Aliento</h2>
+            <div class="msg-wall">
+                <div class="msg-bubble">
+                    "Jamás olviden que con esfuerzo y dedicación pueden alcanzar cualquier meta que se propongan. ¡Muchas felicidades generación!"
+                    <span>- Profr. Mateo Santos G.</span>
+                </div>
+                <div class="msg-bubble">
+                    "Estamos muy orgullosos de ver cómo han crecido y queremos verlos avanzar en cada etapa así de maravilloso."
+                    <span>- Comité de Padres de Familia / Comité de Eventos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CÓDIGO DE VESTIMENTA -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-shirt"></i> Código de Vestimenta</h2>
+            <div class="dress-code">
+                <i class="fa-solid fa-user-tie"></i>
+                <h3 style="color: var(--accent); margin-bottom: 5px; font-family: 'Cinzel', serif;">Formal / Cocktail</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Te pedimos acudir con vestimenta formal para hacer de este día un recuerdo inolvidable.</p>
+            </div>
+        </section>
+
+        <!-- COMITÉ ORGANIZADOR -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-users-rectangle"></i> Junta de Maestros</h2>
+            <div class="committee-box">
+                <h4 style="color: var(--accent); font-size: 0.95rem;">Primaria José María Pino Suárez</h4>
+                <p>Agradecimiento especial a los profesores titulares, directiva y mesa directiva de padres de familia por hacer posible esta emotiva celebración.</p>
+            </div>
+        </section>
+
+        <!-- NOTAS IMPORTANTES -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-circle-exclamation"></i> Notas Importantes</h2>
+            <ul class="notes-list">
+                <li>Se solicita puntualidad para el inicio de la ceremonia de entrega de diplomas a las 10:45 AM.</li>
+                <li>Estacionamiento disponible dentro de las instalaciones de Salón Los Loros.</li>
+                <li>Favor de confirmar su asistencia con anticipación mediante el formulario inferior.</li>
+            </ul>
+        </section>
+
+        <!-- ÁLBUM COLABORATIVO -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-camera-retro"></i> Comparte Tus Fotos</h2>
+            <div class="upload-box">
+                <p style="font-size: 0.85rem; color: var(--text-muted);">¿Tomaste fotos durante la graduación? Súbelas al álbum compartido.</p>
+                <button class="btn-action" onclick="showToast('fa-cloud-arrow-up', '¡Módulo de carga inhabilitado IMPLSTC-ERR: #000023!.')">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> Subir Fotos
+                </button>
+            </div>
+        </section>
+
+        <!-- HASHTAG OFICIAL -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-hashtag"></i> Hashtag Oficial</h2>
+            <div class="hashtag-card">
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Usa esta etiqueta en tus redes sociales:</p>
+                <div class="hashtag-tag">#PinoSuarez2027</div>
+                <button class="btn-action" onclick="navigator.clipboard.writeText('#PinoSuarez2027'); showToast('fa-copy', '¡Hashtag copiado al portapapeles!');">
+                    <i class="fa-solid fa-copy"></i> Copiar Hashtag
+                </button>
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE ASISTENCIA (RSVP) -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-envelope-open-text"></i> Confirmación</h2>
+            
+            <form class="rsvp-form" id="rsvpForm" onsubmit="handleRSVP(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre del alumno o familia:</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Ej. Familia Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="asistentes">Número de lugares confirmados:</label>
+                    <input type="number" id="asistentes" class="form-control" min="1" max="6" value="2" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Dedicatoria para los graduados:</label>
+                    <textarea id="mensaje" class="form-control" rows="3" placeholder="Escribe un mensaje inspirador..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit" id="submitBtn">Confirmar Asistencia</button>
+            </form>
+
+            <!-- TARJETA DE ÉXITO COOL / ALENTADORA -->
+            <div class="success-card" id="successCard">
+                <i class="fa-solid fa-award"></i>
+                <h3>¡Lugares Reservados con Éxito!</h3>
+                <p id="successMessageText">¡Qué gran emoción! Tu asistencia ha quedado registrada. Prepárate para vivir un día inolvidable lleno de orgullo, sonrisas y grandes metas cumplidas. ¡Nos vemos en la gran celebración!</p>
+                <button class="btn-reset" onclick="resetForm()">Enviar otra respuesta</button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Primaria José María Pino Suárez &bull; Generación 2021-2027</p>
+            <p style="margin-top: 5px;">&copy; Powered By <a href="#">Implustec!.</a> Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./main.js"></script>
+</body>
+</html>
