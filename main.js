@@ -86,7 +86,7 @@ function animateBackground() {
 animateBackground();
 
 // Fecha futura de ejemplo para la graduación
-const eventDate = new Date("July 10, 2027 10:00:00").getTime();
+const eventDate = new Date("July 10, 2026 10:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
